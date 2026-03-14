@@ -1,5 +1,5 @@
-#Website: https://tboteproject.com
-#Decentralized Repository: https://tboteproject.com/git/hekate/attestation-findings
+# Website: https://tboteproject.com
+# Decentralized Repository: https://tboteproject.com/git/hekate/attestation-findings
 
 # Meta Platforms: Lobbying, Dark Money, and the App Store Accountability Act
 An open-source intelligence investigation into how Meta Platforms built a multi-channel influence operation to pass age verification laws that shift regulatory burden from social media platforms onto Apple and Google's app stores.
