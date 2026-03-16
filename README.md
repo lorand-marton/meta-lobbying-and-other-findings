@@ -1,12 +1,10 @@
-# Website: https://tboteproject.com
-# Decentralized Repository: https://tboteproject.com/git/hekate/attestation-findings
-
 # Meta Platforms: Lobbying, Dark Money, and the App Store Accountability Act
+
 An open-source intelligence investigation into how Meta Platforms built a multi-channel influence operation to pass age verification laws that shift regulatory burden from social media platforms onto Apple and Google's app stores.
 
 Every finding in this repository is sourced from public records: IRS 990 filings, Senate LD-2 lobbying disclosures, state lobbying registrations, campaign finance databases, corporate registries, WHOIS/DNS records, Wayback Machine archives, and investigative journalism.
 
-**Status:** Active investigation. 47 proven findings, 9 structurally possible but unproven hypotheses, and multiple pending FOIA responses.
+**Status:** Active investigation. 50 proven findings, 9 structurally possible but unproven hypotheses, multiple pending FOIA responses, and an active OSINT surveillance counter-investigation.
 
 **Research period:** 2026-03-11 to present
 
@@ -14,7 +12,9 @@ Every finding in this repository is sourced from public records: IRS 990 filings
 
 Meta spent a record $26.3 million on federal lobbying in 2025, deployed 86+ lobbyists across 45 states, and covertly funded a "grassroots" child safety group called the Digital Childhood Alliance (DCA) to advocate for the App Store Accountability Act (ASAA). The ASAA requires app stores to verify user ages before downloads but imposes no requirements on social media platforms. If it becomes law, Apple and Google absorb the compliance cost while Meta's apps face zero new mandates.
 
-This investigation traced funding flows across five confirmed channels, analyzed $2.0 billion in dark money grants, searched 59,736 DAF recipients, parsed LD-2 filings, and mapped campaign contributions across four states to document the operation.
+**2026-03-16 UPDATE:** DCA's EIN has been identified: 33-2669790. "Digital Childhood Alliance Inc," Delaware, officer Melissa McKay, same address as sister org DCI (213 N Market St PMB 1039, Wilmington DE). Tax year 2024 gross receipts: under $25,000 (990-N e-Postcard filer). An organization coordinating a 20+ state legislative campaign with confirmed Meta funding reports less than $25K in total receipts. The real money never touches this EIN.
+
+This investigation traced funding flows across five confirmed channels, analyzed $2.0 billion in dark money grants, searched 59,736 DAF recipients, parsed LD-2 filings, mapped campaign contributions across four states, documented a coordinated Israeli reconnaissance operation targeting this repository, and exposed Heritage Foundation's role as an institutional credibility launderer for the DCA coalition.
 
 ## Key Visuals
 
@@ -34,32 +34,43 @@ Across all five Arabella Advisors entities (New Venture Fund, Sixteen Thirty Fun
 
 ![Network diagram mapping Meta's five influence channels](output/reports/chart3_influence_network.png)
 
-Five confirmed channels connect Meta's spending to ASAA advocacy: direct federal lobbying ($26.3M), state lobbyist networks (45 states), the Digital Childhood Alliance (astroturf 501(c)(4)), super PACs ($70M+), and state legislative campaigns (3 laws passed). A sixth channel through the Arabella dark money network is structurally possible but unproven.
+Five confirmed channels connect Meta's spending to ASAA advocacy: direct federal lobbying ($26.3M), state lobbyist networks (45 states), the Digital Childhood Alliance (astroturf 501(c)(4)), super PACs ($70M+), and state legislative campaigns (4 laws passed). A sixth channel through the Arabella dark money network is structurally possible but unproven.
 
 ## Interactive Reports
 
-These standalone HTML documents provide detailed views of the investigation:
+Self-contained HTML documents with detailed investigation views:
 
-- **[Full Investigation Documentation](output/reports/meta_investigation_documentation.html)** contains the complete OSINT investigation report with all five channels, evidence tables, and source citations.
+- **[Full Investigation Documentation](output/reports/meta_investigation_documentation.html)** -- complete OSINT investigation report with all five channels, evidence tables, and source citations.
+- **[Funding Network Timeline](output/timeline/funding_network_timeline.html)** -- chronological development of Meta's lobbying infrastructure, DCA's formation, and ASAA legislative progress across states.
+- **[Research Timeline](output/timeline/meta_timeline.html)** -- tracks the investigation itself, showing when each finding was established and how threads connected.
 
-- **[Funding Network Timeline](output/timeline/funding_network_timeline.html)** maps the chronological development of Meta's lobbying infrastructure, DCA's formation, and ASAA legislative progress across states.
-
-- **[Research Timeline](output/timeline/meta_timeline.html)** tracks the investigation itself, showing when each finding was established and how threads connected.
-
-*(These are self-contained HTML files. Clone the repo and open them in a browser, or use Forgejo's raw file view.)*
+Clone the repo and open in a browser, or use Forgejo's raw file view.
 
 ## Repository Structure
 
 ```
-metafindings/
-  data/
-    processed/          24 research findings documents
-    raw/osint_990/      Raw IRS 990 data extracts
-  output/
-    reports/            Summary reports, charts, and HTML documentation
-    timeline/           Interactive timeline visualizations
-    briefs/             Policy briefs and public comments
-  OSINT_TASKLIST.md     Investigation task tracker with completion status
+data/
+  processed/            30+ research findings and analysis documents
+    cross_reference_anomaly_analysis.md    8 anomaly patterns across all channels
+    five_threads_investigation.md          5 parallel investigation threads
+    ncose_forgood_fec_investigation.md     NCOSE, For Good DAF, Meta super PAC analysis
+    icmec_model_legislation_investigation.md  ICMEC vs DCA model legislation comparison
+    heritage_foundation_connections.md     Heritage Foundation credibility laundering
+    other_tech_companies_asaa.md           Snap, X, Pinterest, Roblox ASAA positions
+    connectsafely_990_analysis.md          ConnectSafely conflicts of interest
+    tracking.md                            Master entity/finding tracker (75 entities, 11 bills)
+    all_findings.json                      Structured database of all 248 findings
+    ...                                    24 additional analysis files
+  raw/
+    osint_990/          Raw IRS 990 data extracts
+    connectsafely_990/  ConnectSafely XML/PDF 990 filings (2015-2024)
+  disclosures/          Colorado lobbyist monthly disclosure PDFs
+
+output/
+  reports/              Summary reports, charts, HTML documentation
+  timeline/             Interactive timeline visualizations
+  briefs/               Policy briefs and public comments
+
 ```
 
 ## The Five Confirmed Channels
@@ -74,9 +85,13 @@ At the state level, confirmed operations include $338,500 to Headwaters Strategi
 
 DCA is a 501(c)(4) advocacy group that Meta covertly funds. Bloomberg exposed the funding relationship in July 2025. Under oath at a Louisiana Senate committee hearing, Executive Director Casey Stefanski admitted receiving tech company funding but refused to name donors.
 
-DCA has no EIN in the IRS Business Master File, no incorporation record in any state registry searched (CO, DC, DE, VA, OpenCorporates), and no Form 990 on file. It processes donations through the For Good DAF (formerly Network for Good) as a "Project," not a standalone nonprofit. Its likely fiscal sponsor is NCOSEAction/Institute for Public Policy (EIN 88-1180705), NCOSE's confirmed 501(c)(4) affiliate with the same leadership.
+**EIN 33-2669790 confirmed (2026-03-16).** "Digital Childhood Alliance Inc," Delaware, 213 N Market Street PMB 1039, Wilmington DE 19801. Officer: Melissa McKay. Tax year 2024 gross receipts: under $25,000. 990-N e-Postcard filer (zero financial disclosure). Same address as sister org DCI (EIN 39-3684798). Not on ProPublica, GuideStar, or Charity Navigator.
+
+The under-$25K gross receipts cannot be reconciled with an organization coordinating a 20+ state legislative campaign with confirmed Meta funding, a paid executive director, a registered lobbyist (John Read), commissioned polling, and multi-state testimony programs. The real operating budget does not flow through this EIN. Donations process through the For Good DAF (formerly Network for Good) as "Project 258136." The most probable fiscal sponsor is NCOSEAction/Institute for Public Policy (EIN 88-1180705), NCOSE's confirmed 501(c)(4) affiliate with the same leadership.
 
 DCA's domain was registered December 18, 2024. The website was live and fully formed the next day. Every blog post and testimony targets Apple and Google. Meta is never mentioned or criticized.
+
+**Dual-entity structure:** DCA (c4, lobbying, admits tech funding) and DCI (c3, education, claims no tech funding) share the same Delaware address and founder (Melissa McKay). The lobbying vehicle was created six months before the research arm, reversing standard nonprofit formation order.
 
 ### 3. Super PACs ($70M+)
 
@@ -92,238 +107,268 @@ Meta's Colorado lobbyist Adam Eichberg simultaneously serves as Board Chair of t
 
 The Arabella network operates four entities from 1828 L Street NW, Washington DC (suites 300-A through 300-D) with combined annual revenue exceeding $1.3 billion. All five entities' grant recipients were analyzed (4,433 grants, approximately $2.0 billion). Zero dollars went to any child safety organization, definitively ruling out the Schedule I grant pathway.
 
-If Meta money flows through the Arabella network to DCA, it would have to travel via fiscal sponsorship, consulting fees, or lobbying expenditures, which are more opaque than grant disclosures.
+If Meta money flows through the Arabella network to DCA, it travels via fiscal sponsorship, consulting fees, or lobbying expenditures, which are more opaque than grant disclosures.
 
 ### 5. State Legislative Campaigns
 
-ASAA has been signed into law in three states:
+ASAA has been signed into law in four states:
 - **Utah SB-142** (signed March 26, 2025, first in nation)
 - **Texas SB 2420** (signed May 2025, paused by federal judge December 2025)
 - **Louisiana HB-570** (signed June 30, 2025, effective July 1, 2026)
+- **Alabama HB 161** (passed unanimously 2026)
 
 Roughly 17 additional states have introduced or are considering ASAA bills, including Kansas, South Carolina, Ohio, Georgia, and Florida. The federal version was introduced in May 2025 by Rep. John James (R-MI) and Sen. Mike Lee (R-UT).
 
-## Proven Findings (47)
+### 6. Other ASAA Supporters
+
+Meta is not the only company backing ASAA. Snap and X issued joint statements with Meta supporting ASAA bills in Utah, Texas, and South Dakota. Pinterest's CEO publicly endorsed the federal ASAA in December 2025. Snap's LD-2 filings confirm lobbying on H.R. 3149/S. 1586. Meta remains the only company confirmed funding DCA and the only company documented drafting bill language. Every confirmed ASAA supporter is a social media platform that benefits from shifting age verification to the app store layer. Every confirmed opponent operates an app store that would bear the compliance burden.
+
+### 7. ICMEC: The Competing Model
+
+Two distinct model legislation frameworks circulate at the state level, often conflated. ICMEC's Digital Age Assurance Act (DAAA) targets device/OS-level verification and places the burden on Apple, Google, and Microsoft as device manufacturers. DCA's App Store Accountability Act (ASAA) targets app store-level verification and places the burden on app stores specifically. Meta donates to ICMEC but funds DCA. Both approaches shift regulation away from social media platforms. ICMEC personnel testify for DAAA-style bills; DCA personnel testify for ASAA-style bills.
+
+### 8. Heritage Foundation as Credibility Launderer
+
+Heritage Foundation awarded Innovation Prizes to three of six named DCA coalition members: NCOSE, Institute for Family Studies ($50K), and Ethics and Public Policy Center ($50K). Annie Chestnut Tutor served as legislative assistant to Sen. Mike Lee (tech/telecom portfolio), then Heritage policy analyst, and appeared on the DCA website from its first day (December 19, 2024). Heritage and Moms for Liberty (both DCA coalition members) underwent a leadership merger when Tiffany Justice (M4L co-founder) became Heritage Action EVP in July 2025. Heritage provides conservative institutional credibility for a coalition whose funding traces back to Meta, forming a closed policy loop: Meta funds DCA, DCA's core members are Heritage-funded, Heritage staffs the advocacy.
+
+## DCA EIN Discovery (2026-03-16)
+
+EIN 33-2669790 was located via eintaxid.com. Prior investigation searches found DCA absent from the IRS Business Master File (all 4 regional extracts), ProPublica, GuideStar, Candid, Charity Navigator, and state corporate registries in CO, DC, DE, and VA. The EIN may have been assigned after those searches, or 990-N filers may lag in BMF indexing.
+
+**The funding flow problem:**
+
+```
+Meta ($26.3M lobbying budget, 2025)
+  |
+  +-- Direct lobbying ($338K CO, $325K+ LA, etc.)
+  |
+  +-- DCA (EIN 33-2669790) <-- reports <$25K  <-- WHERE IS THE REST?
+  |     Melissa McKay (officer)
+  |     Casey Stefanski (exec director)
+  |
+  +-- For Good DAF (EIN 68-0480736) --> DCA "Project 258136"
+  |     $204M annual pass-through volume (DCA invisible in this)
+  |     59,736 grant recipients searched: zero matches
+  |
+  +-- NCOSEAction (EIN 88-1180705) <-- probable fiscal sponsor
+  |     501(c)(4), same leadership as NCOSE
+  |     Dawn Hawkins chairs DCA + runs NCOSE
+  |     IRS ruling May 2025 (timing matches DCA launch)
+  |     Zero reported transactions with parent NCOSE
+  |
+  +-- Hilltop Public Solutions / DCI Group (consulting firms)
+        Coordinate messaging + grassroots campaigns
+        Hilltop also co-leads $45M ATEP super PAC
+```
+
+Three EINs in this investigation share the same Delaware PMB address (213 N Market St PMB 1039, Wilmington):
+- DCA: 33-2669790 (c4, <$25K, 990-N)
+- DCI: 39-3684798 (c3, IRS ruling Nov 2025)
+- Both: Officer Melissa McKay
+
+## Proven Findings (50)
 
 Each finding below is documented with sources in the corresponding analysis file.
 
-### Direct Lobbying
+### Direct Lobbying (1-19)
 
-1. Meta funds DCA, confirmed by Bloomberg reporters and partially admitted by Stefanski under oath at the Louisiana Senate Commerce Committee hearing (April 2025). *Sources: Insurance Journal/Bloomberg July 2025, Deseret News Dec 2025, The Center Square LA.*
-2. Meta deployed 86+ lobbyists across 45 states for ASAA and related campaigns. *Source: OpenSecrets, state lobbying registrations.*
-3. Meta spent $26.3 million on federal lobbying in 2025, an all-time record exceeding Lockheed Martin and Boeing. *Source: OpenSecrets, Quiver Quantitative, Dome Politics.*
-4. Meta paid Headwaters Strategies $338,500 for Colorado lobbying between 2019 and 2026. *Source: Colorado SOS SODA API.*
-5. Adam Eichberg simultaneously co-founded Meta's Colorado lobbying firm (Headwaters Strategies) and chairs the New Venture Fund board. *Sources: Headwaters Strategies website, NVF board page, InfluenceWatch.*
-6. NVF transfers $121.3 million to the Sixteen Thirty Fund (c)(4) annually. *Source: NVF Form 990 Schedule I, 2022-2024.*
-7. NVF does not directly fund any child safety or tech policy organizations via Schedule I grants. *Source: NVF Form 990 Schedule I analysis, 2,669 recipients.*
-8. DCA and DCI share infrastructure: same registrar (GoDaddy), CDN (Cloudflare), email (Microsoft 365), and marketing platform (Elastic Email). *Source: DNS/WHOIS analysis.*
-9. Pelican State Partners represents Meta as a lobbying client in Louisiana. *Source: F Minus database, LA Board of Ethics.*
-10. DCA leadership comes from NCOSE: three of four senior staff have NCOSE connections (Stefanski, Hawkins, McKay). *Source: DCA website, NCOSE public records.*
-11. DCA's John Read spent 30 years at DOJ Antitrust investigating app stores and Big Tech. *Source: DOJ case filings, DCA team page.*
-12. ASAA has been signed into law in three states: Utah (SB-142, March 2025), Louisiana (HB-570, June 2025), and Texas (SB 2420, May 2025, paused by judge December 2025). *Sources: State legislature records, news coverage.*
-13. The Sixteen Thirty Fund does not fund any child safety or tech policy organizations via Schedule I grants (306 of 318 recipients analyzed). *Source: STF Form 990 Schedule I, 2024.*
-14. All five Arabella entities analyzed: 4,433 grants (approximately $2.0 billion) with zero dollars going to child safety or tech policy organizations. Schedule I pathway definitively ruled out across the entire network. *Sources: NVF, STF, North Fund, Windward, Hopewell Form 990 Schedule I filings via ProPublica.*
-15. A Meta employee (Jake Levine, Product Manager) contributed $1,175 to ASAA sponsor Matt Ball's campaign apparatus on June 2, 2025. *Source: Colorado TRACER bulk data.*
-16. A Google Policy Manager (Kyle Gardner) also contributed $450 to Matt Ball. Multiple tech company employees from ASAA-affected companies targeted the same ASAA bill sponsor. *Source: Colorado TRACER bulk data.*
-17. Eichberg and Coyne (Headwaters principals) did not contribute to ASAA bill sponsors Ball or Paschal despite $20,000+ combined political giving. *Source: Colorado TRACER bulk data.*
-18. No direct Meta PAC contributions to any ASAA sponsor across Utah, Louisiana, Texas, or Colorado. *Source: FollowTheMoney.org multi-state search.*
-19. Todd Weiler (Utah SB-142 sponsor) does not accept corporate contributions and has not discussed ASAA directly with Meta. DCA served as the policy intermediary. *Source: Investigative reporting, Weiler's public statements.*
-20. DCA has no EIN in the IRS Business Master File. Not found in any of four regional extracts (eo1-eo4.csv) covering all US tax-exempt organizations. *Source: IRS BMF regional extracts.*
-21. DCI confirmed in IRS BMF with EIN 39-3684798, Delaware incorporation at 213 N Market St Wilmington, IRS ruling November 2025. *Source: IRS BMF extract.*
-22. Meta's Forge the Future super PAC spent $1.3 million in Texas ahead of March 2026 primaries. *Source: Texas Ethics Commission filings, news coverage.*
-23. DCA's website deployed less than 24 hours after domain registration: fully functional advocacy site with professional design, statistics, and Heritage/NCOSE testimonials. *Source: Wayback Machine CDX API, 100+ snapshots.*
-24. 77-day pipeline from DCA domain registration (December 18, 2024) to Utah SB-142 signing (March 5, 2025). Site pre-loaded with ASAA talking points before any bill had passed. *Source: WHOIS records, Utah Legislature.*
-25. Meta deployed 12 lobbyists for Louisiana HB-570, which passed 99-0. Disproportionate deployment indicates text-control and amendment-blocking rather than vote persuasion. *Source: Investigative reporting, LA Board of Ethics.*
-26. Three California tech policy employees from Meta, Google, and Pinterest contributed to Matt Ball within 90 days. All from ASAA-affected companies, all out-of-state, targeting a newly-appointed senator. *Source: Colorado TRACER bulk data.*
-27. Pelican State Partners represents both Meta and Roblox in Louisiana. Both are ASAA beneficiaries, enabling "broad industry support" framing. *Source: F Minus database.*
-28. DCA's coalition count inflated from 50+ to 140+ with only six organizations ever publicly named. No member list has been published on the website. *Source: DCA website, Wayback Machine.*
-29. NCOSE has a confirmed 501(c)(4) affiliate: NCOSEAction / Institute for Public Policy (EIN 88-1180705), IRS ruling May 2025, same address and leadership as NCOSE. *Source: IRS BMF, NCOSE website.*
-30. Network for Good is a Donor Advised Fund, not a payment processor. DCA is classified as "Project" (ID 258136) in the system. For Good explicitly limits grants to 501(c)(3) organizations. *Source: For Good website, IRS determination.*
-31. A Meta lobbyist drafted HB-570's legislative language, confirmed by sponsor Rep. Kim Carver. The bill as originally written placed age verification burden exclusively on app stores, not platforms. *Source: Investigative reporting, Carver's public confirmation.*
-32. Sen. Jay Morris's amendment expanded HB-570 to include app developers alongside app stores, leading to a conference committee compromise. *Source: LA Legislature records.*
-33. Nicole Lopez (Meta Director of Global Litigation Strategy for Youth) testified in both Louisiana and South Dakota for ASAA bills, serving as Meta's national ASAA spokesperson. *Source: Legislative hearing records.*
-34. The Sixteen Thirty Fund's $31 million lobbying budget and $13.1 million in professional fees contain zero mentions of child safety, digital policy, age verification, or app stores. *Source: STF Form 990 Part IX.*
-35. John R. Read (DCA Senior Policy Advisor) lists "Digital Childhood Alliance" as his employer in Colorado TRACER records. Contributed $100 to AG candidate Hetal Doshi (October 2025). *Source: Colorado TRACER.*
-36. Matt Ball received 8% of total fundraising from tech industry employees. He is the only 2026 Colorado senate candidate with contributions from Meta, Pinterest, Instacart, Anthropic, and Google employees. Four of eight dual-maxed donors are tech employees. *Source: Colorado TRACER analysis.*
-37. NCOSE Schedule R reveals a two-entity evolution: the original NCOSE Action (EIN 86-2458921, c4 reclassified to c3) was replaced by the Institute for Public Policy (EIN 88-1180705, c4). All 19 NCOSE-to-Institute transaction indicators are marked "No" despite shared leadership. *Source: NCOSE Form 990 Schedule R, 2019-2023.*
-38. For Good DAF pathway definitively ruled out: 59,736 grant recipients across five years (approximately $1.73 billion) searched with zero matches for DCA, DCI, NCOSE, NCOSEAction, or any related entity. *Source: For Good DAF grant data.*
-39. NCOSE lobbying spending tripled from $78,000 to $204,000 concurrent with DCA launch and the ASAA legislative push (FY2023 to FY2024). *Source: NCOSE Form 990 Part IX.*
-40. Forge the Future super PAC explicitly lists an ASAA-aligned policy priority: "Empowering parents with oversight of children's online activities across devices and digital environments." *Source: Forge the Future filings.*
-41. Hilltop Public Solutions bridges Meta's super PAC and DCA operations. It co-leads ATEP ($45M) and is involved in DCA messaging coordination. First firm confirmed in both tracks. *Source: ATEP filings, investigative reporting.*
-42. Meta super PACs are state-level entities (not FEC-registered), deliberately scattering filings across state ethics commissions to avoid centralized searchability. *Source: FEC search (negative), state PAC registrations.*
-43. Meta's total documented political spending exceeds $70 million: $45M ATEP, $20M META California, $5M California Leads, with downstream flows to Forge the Future (TX) and Making Our Tomorrow (IL). *Source: State PAC filings, news coverage.*
-44. Casey Stefanski never appears on any NCOSE 990 filing despite reportedly working there ten years. Not among officers, directors, key employees, or five highest-compensated. *Source: NCOSE Form 990 filings, 2015-2023.*
-45. Meta's LD-2 filings explicitly list the App Store Accountability Act (H.R. 3149/S. 1586) as a lobbied bill. This is the first direct evidence from Meta's own federal filings connecting its $26.3M lobbying spend to the specific legislation DCA advocates for. *Source: Senate LDA filing UUID b73445ed-15e5-42e7-a1e8-aeb224755267.*
-46. Meta simultaneously lobbies FOR ASAA and ON KOSA/COPPA 2.0, supporting legislation that burdens Apple and Google while opposing or amending legislation that would regulate Meta directly. Both appear in the same LD-2 filing. *Source: Meta LD-2 Q1-Q2 2025.*
-47. LD-2 narrative mirrors DCA messaging: "youth safety and federal parental approval" framing in Meta's federal filings matches DCA's "parental approval" and "child protection" advocacy language. *Source: LD-2 filing CPI issue code narrative.*
+1. Meta funds DCA, confirmed by Bloomberg reporters and partially admitted by Stefanski under oath at the Louisiana Senate Commerce Committee hearing (April 2025).
+2. Meta deployed 86+ lobbyists across 45 states for ASAA and related campaigns.
+3. Meta spent $26.3 million on federal lobbying in 2025, an all-time record exceeding Lockheed Martin and Boeing.
+4. Meta paid Headwaters Strategies $338,500 for Colorado lobbying between 2019 and 2026.
+5. Adam Eichberg simultaneously co-founded Meta's Colorado lobbying firm (Headwaters Strategies) and chairs the New Venture Fund board.
+6. NVF transfers $121.3 million to the Sixteen Thirty Fund (c4) annually.
+7. NVF does not directly fund any child safety or tech policy organizations via Schedule I grants.
+8. DCA and DCI share infrastructure: same registrar (GoDaddy), CDN (Cloudflare), email (Microsoft 365), and marketing platform (Elastic Email).
+9. Pelican State Partners represents Meta as a lobbying client in Louisiana.
+10. DCA leadership comes from NCOSE: three of four senior staff have NCOSE connections (Stefanski, Hawkins, McKay).
+11. DCA's John Read spent 30 years at DOJ Antitrust investigating app stores and Big Tech.
+12. ASAA signed into law in four states: Utah (SB-142, March 2025), Louisiana (HB-570, June 2025), Texas (SB 2420, May 2025, paused by judge December 2025), Alabama (HB 161, 2026).
+13. The Sixteen Thirty Fund does not fund any child safety or tech policy organizations via Schedule I grants.
+14. All five Arabella entities analyzed: 4,433 grants (approximately $2.0 billion) with zero dollars going to child safety or tech policy organizations.
+15. A Meta employee (Jake Levine, Product Manager) contributed $1,175 to ASAA sponsor Matt Ball's campaign apparatus on June 2, 2025.
+16. A Google Policy Manager (Kyle Gardner) also contributed $450 to Matt Ball. Multiple tech company employees from ASAA-affected companies targeted the same ASAA bill sponsor.
+17. Eichberg and Coyne (Headwaters principals) did not contribute to ASAA bill sponsors Ball or Paschal despite $20,000+ combined political giving.
+18. No direct Meta PAC contributions to any ASAA sponsor across Utah, Louisiana, Texas, or Colorado.
+19. Todd Weiler (Utah SB-142 sponsor) does not accept corporate contributions and has not discussed ASAA directly with Meta. DCA served as the policy intermediary.
+
+### DCA Investigation (20-24)
+
+20. DCA EIN 33-2669790 confirmed (2026-03-16). "Digital Childhood Alliance Inc," Delaware, 213 N Market St PMB 1039, Wilmington DE. Officer: Melissa McKay. Tax year 2024 gross receipts: under $25,000. 990-N e-Postcard filer. Not on ProPublica, GuideStar, or Charity Navigator.
+21. DCI confirmed in IRS BMF with EIN 39-3684798, Delaware incorporation at same address, IRS ruling November 2025.
+22. DCA and DCI share identical Delaware address and same officer (Melissa McKay), confirming dual-entity structure under single control.
+23. DCA reports under $25K despite confirmed Meta funding, proving primary funding flows through undisclosed channels (NCOSEAction, STF, or direct Meta payments).
+24. DCA's website deployed less than 24 hours after domain registration: fully functional advocacy site with professional design, statistics, and Heritage/NCOSE testimonials.
+
+### Legislative Process (25-33)
+
+25. 77-day pipeline from DCA domain registration (December 18, 2024) to Utah SB-142 signing (March 5, 2025). Site pre-loaded with ASAA talking points before any bill had passed.
+26. Meta deployed 12 lobbyists for Louisiana HB-570, which passed 99-0. Disproportionate deployment for text-control and amendment-blocking, not vote persuasion.
+27. Three California tech policy employees from Meta, Google, and Pinterest contributed to Matt Ball within 90 days. All from ASAA-affected companies, all out-of-state, targeting a newly-appointed senator.
+28. Pelican State Partners represents both Meta and Roblox in Louisiana. Both ASAA beneficiaries, enabling "broad industry support" framing.
+29. DCA's coalition count inflated from 50+ to 140+ with only six organizations ever publicly named. No member list published on the website.
+30. A Meta lobbyist drafted HB-570's legislative language, confirmed by sponsor Rep. Kim Carver.
+31. Sen. Jay Morris's amendment expanded HB-570 to include app developers alongside app stores, leading to a conference committee compromise.
+32. Nicole Lopez (Meta Director of Global Litigation Strategy for Youth) testified in both Louisiana and South Dakota for ASAA bills, serving as Meta's national ASAA spokesperson.
+33. Meta's LD-2 filings explicitly list the App Store Accountability Act (H.R. 3149/S. 1586) as a lobbied bill.
+
+### Fiscal Sponsorship and Dark Money (34-44)
+
+34. NCOSE has a confirmed 501(c)(4) affiliate: NCOSEAction / Institute for Public Policy (EIN 88-1180705), IRS ruling May 2025, same address and leadership as NCOSE.
+35. Network for Good is a Donor Advised Fund, not a payment processor. DCA classified as "Project" (ID 258136) in the system. For Good explicitly limits grants to 501(c)(3) organizations.
+36. NCOSE Schedule R reveals a two-entity evolution: the original NCOSE Action (EIN 86-2458921, c4 reclassified to c3) was replaced by the Institute for Public Policy (EIN 88-1180705, c4). All 19 NCOSE-to-Institute transaction indicators are marked "No" despite shared leadership.
+37. For Good DAF pathway definitively ruled out: 59,736 grant recipients across five years (approximately $1.73 billion) searched with zero matches for DCA, DCI, NCOSE, NCOSEAction, or any related entity.
+38. The Sixteen Thirty Fund's $31 million lobbying budget and $13.1 million in professional fees contain zero mentions of child safety, digital policy, age verification, or app stores.
+39. NCOSE lobbying spending tripled from $78,000 to $204,000 concurrent with DCA launch and the ASAA legislative push (FY2023 to FY2024).
+40. Casey Stefanski never appears on any NCOSE 990 filing despite reportedly working there ten years. Not among officers, directors, key employees, or five highest-compensated.
+41. Forge the Future super PAC explicitly lists an ASAA-aligned policy priority.
+42. Hilltop Public Solutions bridges Meta's super PAC and DCA operations. Co-leads ATEP ($45M) and involved in DCA messaging coordination. First firm confirmed in both tracks.
+43. Meta super PACs are state-level entities (not FEC-registered), scattering filings across state ethics commissions to avoid centralized searchability.
+44. Meta's total documented political spending exceeds $70 million across four state-level super PACs.
+
+### Cross-Reference and Coalition (45-50)
+
+45. Meta simultaneously lobbies FOR ASAA and ON KOSA/COPPA 2.0, supporting legislation that burdens Apple and Google while opposing or amending legislation that would regulate Meta directly.
+46. LD-2 narrative mirrors DCA messaging: "youth safety and federal parental approval" framing in Meta's federal filings matches DCA's "parental approval" and "child protection" advocacy language.
+47. John R. Read (DCA Senior Policy Advisor) lists "Digital Childhood Alliance" as his employer in Colorado TRACER records.
+48. Matt Ball received 8% of total fundraising from tech industry employees. Only 2026 Colorado senate candidate with contributions from Meta, Pinterest, Instacart, Anthropic, and Google employees.
+49. Heritage Foundation awarded Innovation Prizes to three of six named DCA coalition members. Heritage staffs DCA advocacy through the Mike Lee to Heritage to DCA pipeline.
+50. ConnectSafely CEO Larry Magid serves on Meta's Safety Advisory Council while running a nominally independent child safety organization. Revenue is 89.7% contributions, executive compensation consumes 57.5% of expenses, and Magid has publicly opposed certain child safety bills.
 
 ## Structurally Possible but Unproven
 
 1. Meta funds flow through the Arabella network via non-grant mechanisms (fiscal sponsorship, consulting fees, lobbying expenditures). The Schedule I and For Good DAF pathways are both ruled out.
-2. DCA operates under NCOSEAction (EIN 88-1180705) as fiscal sponsor. The personnel chain is direct (van der Watt to Hawkins to Stefanski), but NCOSE reports zero transactions with its c4 affiliate.
+2. DCA operates under NCOSEAction (EIN 88-1180705) as fiscal sponsor despite having its own EIN (33-2669790). DCA's under-$25K gross receipts mean operational funding still flows through another entity. The personnel chain is direct (van der Watt to Hawkins to Stefanski), but NCOSE reports zero transactions with its c4 affiliate.
 3. NVF's $36.7 million in lobbying expenditures support age verification advocacy.
-4. Jake Levine's contribution to Matt Ball was coordinated by Meta's government affairs team rather than being purely personal.
+4. Jake Levine's contribution to Matt Ball was coordinated by Meta's government affairs team.
 5. STF's $31M lobbying fees and $13.1M professional fees include age verification advocacy, but aggregate reporting prevents confirmation.
 6. Angela Paxton (Texas ASAA sponsor) was among the unnamed state senators supported by Forge the Future.
-7. NCOSE's lobbying spend tripling is causally related to DCA/ASAA activity (timing is concurrent but program descriptions do not mention ASAA).
+7. NCOSE's lobbying spend tripling is causally related to DCA/ASAA activity.
 8. DCA's For Good donation page is cosmetic. Actual funding comes directly from Meta, not small-dollar DAF donations.
 
 ## External Sources
 
 ### Federal Lobbying and Legislative Records
+
 | Source | URL |
 |--------|-----|
 | OpenSecrets Meta Profile | https://www.opensecrets.org/federal-lobbying/clients/summary?id=D000033563 |
 | OpenSecrets Meta Lobbyists | https://www.opensecrets.org/federal-lobbying/clients/lobbyists?cycle=2025&id=D000033563 |
-| OpenSecrets Meta Reports | https://www.opensecrets.org/federal-lobbying/clients/reports?cycle=2025&id=d000033563 |
 | Senate LDA Filing (Q1 2025) | https://lda.senate.gov/filings/public/filing/b73445ed-15e5-42e7-a1e8-aeb224755267/print/ |
 | Congress.gov H.R. 3149 | https://www.congress.gov/bill/119th-congress/house-bill/3149 |
 | Congress.gov S. 1586 | https://www.congress.gov/bill/119th-congress/senate-bill/1586 |
 
 ### IRS Nonprofit Filings
+
 | Source | URL |
 |--------|-----|
+| DCA EIN 33-2669790 | https://eintaxid.com/company/332669790-digital-childhood-alliance-inc/ |
 | ProPublica NVF | https://projects.propublica.org/nonprofits/organizations/205806345 |
 | ProPublica Sixteen Thirty Fund | https://projects.propublica.org/nonprofits/organizations/264486735 |
-| ProPublica Windward Fund | https://projects.propublica.org/nonprofits/organizations/473522162 |
-| ProPublica Hopewell Fund | https://projects.propublica.org/nonprofits/organizations/473681860 |
+| ProPublica NCOSEAction | https://projects.propublica.org/nonprofits/organizations/881180705 |
 | ProPublica ConnectSafely | https://projects.propublica.org/nonprofits/organizations/473168168 |
-| ProPublica DCI | https://projects.propublica.org/nonprofits/organizations/393684798 |
 | NVF 2023 Form 990 | https://newventurefund.org/wp-content/uploads/2024/11/2023-New-Venture-Fund-Form-990-Public-Disclosure-Copy.pdf |
-| STF 2024 Form 990 | https://www.sixteenthirtyfund.org/wp-content/uploads/2025/11/Sixteen-Thirty-Fund-2024-Public-Disclosure-Copy-rG58c3r55H5J50YadU6i.pdf |
 
 ### State Lobbying and Campaign Finance
+
 | Source | URL |
 |--------|-----|
-| Colorado SODA API (Lobbyist Income) | https://data.colorado.gov/resource/dxfk-9ifj.json |
-| Colorado TRACER (Contributions) | https://tracer.sos.colorado.gov/PublicSite/DataDownload.aspx |
+| Colorado SODA API | https://data.colorado.gov/resource/dxfk-9ifj.json |
+| Colorado TRACER | https://tracer.sos.colorado.gov/PublicSite/DataDownload.aspx |
 | F Minus (Pelican State Partners) | https://fminus.org/clients/pelican-state-partners-llc/ |
-| LA Board of Ethics (Koch) | https://eap.ethics.la.gov/Lobbyist/upload/349/ |
 | FollowTheMoney (Meta) | https://www.followthemoney.org/entity-details?eid=54466150 |
-| FollowTheMoney (Headwaters) | https://www.followthemoney.org/entity-details?eid=6153564 |
 
 ### State Legislative Records
+
 | Source | URL |
 |--------|-----|
 | Louisiana HB-570 | https://www.legis.la.gov/Legis/BillInfo.aspx?i=248616 |
-| HB-570 Enrolled Text | https://www.legis.la.gov/legis/ViewDocument.aspx?d=1425304 |
-| HB-570 Act No. 481 | https://www.legis.la.gov/legis/ViewDocument.aspx?d=1427667 |
-| HB-570 Conference Report | https://www.legis.la.gov/legis/ViewDocument.aspx?d=1421828 |
-| HB-570 Resume Digest | https://www.legis.la.gov/Legis/ViewDocument.aspx?d=1429703 |
-| LegiScan LA HB-570 | https://legiscan.com/LA/bill/HB570/2025 |
-| FastDemocracy LA HB-570 | https://fastdemocracy.com/bill-search/la/2025/bills/LAB00024814/ |
 | Utah SB-142 | https://le.utah.gov/~2025/bills/static/SB0142.html |
 | Colorado SB26-051 | https://leg.colorado.gov/bills/SB26-051 |
-| Colorado SB25-086 | https://leg.colorado.gov/bills/SB25-086 |
-| Colorado HB25-1287 | https://leg.colorado.gov/bills/HB25-1287 |
 
 ### Organizational Profiles
+
 | Source | URL |
 |--------|-----|
 | DCA Website | https://www.digitalchildhoodalliance.org/ |
 | DCA Stefanski Bio | https://www.digitalchildhoodalliance.org/meet-digital-childhood-alliance-executive-director-casey-stefanski/ |
-| DCA Idealist Profile | https://www.idealist.org/en/nonprofit/5310a13d20e94a97b722d21365e497ce-digital-childhood-alliance-washington |
-| DCA Facebook | https://www.facebook.com/p/Digital-Childhood-Alliance-Inc-61571460776409/ |
 | NVF Board (Eichberg) | https://newventurefund.org/who-we-are/board-of-directors/adam-eichberg-chair-of-the-board/ |
 | Headwaters Strategies | https://headwatersstrategies.com/ |
 | InfluenceWatch (Eichberg) | https://www.influencewatch.org/person/adam-eichberg/ |
-| InfluenceWatch (Windward) | https://www.influencewatch.org/non-profit/windward-fund/ |
-| Pelican State Partners | https://www.pelicanstate.com/about |
-| ConnectSafely Supporters | https://connectsafely.org/about-us/supporters/ |
+| ICMEC Model DAAA | https://cdn.icmec.org/wp-content/uploads/2024/10/Digital-Age-Assurance-Act-2024.pdf |
+| ICMEC Supporters | https://www.icmec.org/our-supporters/ |
 
 ### Investigative Reporting
+
 | Source | URL |
 |--------|-----|
-| Bloomberg Government (CA Lobbying) | https://news.bgov.com/bloomberg-government-news/meta-on-path-for-record-year-spend-on-california-tech-lobbying |
-| Dome Politics (Lobbying Record) | https://domepolitics.com/2026/02/meta-breaks-all-time-lobbying-record-as-georgia-lawmakers-consider-online-safety-bills/ |
-| Insurance Journal/Bloomberg (Meta+DCA) | https://www.insurancejournal.com/news/national/2025/07/25/833246.htm |
+| Bloomberg/Insurance Journal (Meta+DCA) | https://www.insurancejournal.com/news/national/2025/07/25/833246.htm |
 | Deseret News (Meta Manipulation) | https://www.deseret.com/opinion/2025/12/07/child-safety-bill-backed-by-meta/ |
-| ACT The App Association | https://actonline.org/2025/05/23/into-the-metaverse-the-money-and-motivations-behind-metas-app-store-gambit/ |
-| Quiver Quantitative (Q4 Record) | https://www.quiverquant.com/news/Meta+Files+$6.5+Million+New+Lobbying+Disclosure+as+Q4+Total+Reaches+Record+High |
 | The Center Square (Stefanski) | https://www.thecentersquare.com/louisiana/article_e97200f8-13d0-4b1f-90a9-e9a7093d329f.html |
-| Legis1 (Meta Lobbying) | https://legis1.com/news/meta-platforms-pours-nearly-8m-into-lobbying-as-take-it-down-act-passes-congress/ |
-| Legis1 (Child Safety Q3) | https://legis1.com/news/meta-child-safety-lobbying/ |
 | Pluribus News (ASAA) | https://pluribusnews.com/news-and-events/meta-lobbies-for-app-store-age-verification-laws/ |
-| Biometric Update (Pinterest+ASAA) | https://www.biometricupdate.com/202512/pinterest-lines-up-behind-meta-to-endorse-app-store-accountability-act |
-| Tech Transparency Project | https://www.techtransparencyproject.org/articles/inside-metas-spin-machine-on-kids-and-social-media |
-| IFS (50+ Groups Form DCA) | https://ifstudies.org/in-the-news/over-50-conservative-groups-form-digital-childhood-alliance-to-push-for-child-safety-online |
-| Kansas Reflector (DCA) | https://kansasreflector.com/2026/03/05/tech-companies-vie-for-influence-over-kansas-app-store-age-verification-legislation/ |
 | Jessica Reed Kraus (Mom Groups) | https://jessicareedkraus.substack.com/p/how-meta-funded-mom-groups-teach |
-| Capital Research (Arabella) | https://capitalresearch.org/article/donors-to-the-arabella-advisors-network/ |
-
-### Opposition Testimony
-| Source | URL |
-|--------|-----|
-| R Street (Opposing SB-142) | https://www.rstreet.org/outreach/testimony-in-opposition-to-utah-senate-bill-142-app-store-accountability-act/ |
-| NetChoice (Opposing SB-142) | https://netchoice.org/netchoice-testimony-in-opposition-to-utah-sb-142/ |
-
-### Other References
-| Source | URL |
-|--------|-----|
-| DCA PR Newswire Launch | https://www.prnewswire.com/news-releases/over-50-child-advocacy-groups-unite-to-demand-app-store-accountability-302385162.html |
-| Meta Political Engagement | https://about.meta.com/facebook-political-engagement/ |
-| DOJ Antitrust (John Read) | https://www.justice.gov/atr/case-document/declaration-john-r-read |
-| California AB-1043 Text | https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB1043 |
-| Gov. Newsom Signs AB-1043 | https://www.gov.ca.gov/2025/10/13/governor-newsom-signs-bills-to-further-strengthen-californias-leadership-in-protecting-children-online/ |
-| Bloomberg Gov (CA Age Law) | https://news.bgov.com/bloomberg-government-news/california-enacts-google-backed-law-for-app-stores-to-verify-age |
-| Business Report (Pelican State Formation) | https://www.businessreport.com/newsletters/lapolitics-roedel-parsons-disbands-members-launch-pelican-state |
+| Kansas Reflector (DCA) | https://kansasreflector.com/2026/03/05/tech-companies-vie-for-influence-over-kansas-app-store-age-verification-legislation/ |
+| Tech Transparency Project | https://www.techtransparencyproject.org/articles/inside-metas-spin-machine-on-kids-and-social-media |
 
 ## Analysis Files
+
+### Cross-Reference and Anomaly Analysis
+- [Cross-Reference Anomaly Analysis](data/processed/cross_reference_anomaly_analysis.md) -- 8 anomaly patterns across all investigation channels
+- [Five Threads Investigation](data/processed/five_threads_investigation.md) -- NCOSE c4, For Good DAF, STF expenses, LA HB-570, Ball contributions
+- [NCOSE, For Good, and FEC Investigation](data/processed/ncose_forgood_fec_investigation.md) -- Schedule R evolution, DAF dead end, Meta super PAC architecture
+
+### DCA and Coalition Investigation
+- [DCA Team and Formation](data/processed/dca_team_and_formation_findings.md)
+- [DCA Wayback Analysis](data/processed/dca_wayback_findings.md)
+- [DCA DNS/WHOIS](data/processed/dca_dns_whois_findings.md)
+- [DCA Incorporation Updated](data/processed/dca_incorporation_updated.md)
+- [Heritage Foundation Connections](data/processed/heritage_foundation_connections.md) -- institutional credibility laundering
+- [Other Tech Companies ASAA](data/processed/other_tech_companies_asaa.md) -- Snap, X, Pinterest, Roblox positions
 
 ### IRS and Nonprofit Data
 - [NVF Schedule I Analysis](data/processed/nvf_schedule_i_analysis.md)
 - [STF Schedule I Analysis](data/processed/stf_schedule_i_analysis.md)
 - [North Fund Schedule I Analysis](data/processed/north_fund_schedule_i_analysis.md)
-- [Windward and Hopewell Schedule I Analysis](data/processed/windward_hopewell_schedule_i_analysis.md)
-- [Arabella 990 Findings](data/processed/arabella_990_findings.md)
-- [NVF 990 Findings](data/processed/nvf_990_findings.md)
+- [Windward and Hopewell Schedule I](data/processed/windward_hopewell_schedule_i_analysis.md)
+- [ConnectSafely 990 Analysis](data/processed/connectsafely_990_analysis.md) -- conflicts of interest
+- [ConnectSafely UK Grant](data/processed/connectsafely_uk_grant_investigation.md)
 
 ### Lobbying Disclosure
-- [Headwaters Expenditures](data/processed/headwaters_expenditure_findings.md)
-- [Koch Lobbyist Findings](data/processed/koch_lobbyist_findings.md)
-- [California Lobbying](data/processed/california_lobbying_findings.md)
 - [Meta National Lobbying](data/processed/meta_national_lobbying_findings.md)
-- [Meta LD-2 Lobbying Disclosures](data/processed/meta_ld2_lobbying_disclosures.md)
+- [Meta LD-2 Disclosures](data/processed/meta_ld2_lobbying_disclosures.md)
+- [Headwaters Expenditures](data/processed/headwaters_expenditure_findings.md)
+- [California Lobbying](data/processed/california_lobbying_findings.md)
+- [Forge the Future TX Expenditures](data/processed/forge_the_future_tx_expenditures.md)
 
-### DCA Investigation
-- [DCA Team and Formation](data/processed/dca_team_and_formation_findings.md)
-- [DCA Wayback Analysis](data/processed/dca_wayback_findings.md)
-- [DCA DNS/WHOIS](data/processed/dca_dns_whois_findings.md)
-- [DCA Corporate Registry](data/processed/dca_corporate_registry_findings.md)
-- [DCA Incorporation Updated](data/processed/dca_incorporation_updated.md)
+### Legislative Analysis
+- [ICMEC Model Legislation](data/processed/icmec_model_legislation_investigation.md) -- DAAA vs ASAA comparison
+- [Global Coordination Research](data/processed/global_coordination_research.md) -- international age verification comparison
+- [Utah and Texas Findings](data/processed/utah_texas_legislative_findings.md)
+- [Louisiana HB-570](data/processed/la_hb570_corrected.md)
+- [Colorado GA Witness Findings](data/processed/co_ga_witness_findings.md)
 
 ### Campaign Contributions
 - [Colorado TRACER Findings](data/processed/co_tracer_contribution_findings.md)
-- [FollowTheMoney Multi-State Search](data/processed/followthemoney_multistate_findings.md)
+- [Matt Ball SB26-051 Analysis](adameichfindings/matt-ball-sb26-051.md)
+- [FollowTheMoney Multi-State](data/processed/followthemoney_multistate_findings.md)
 
-### Cross-Reference and Anomaly Analysis
-- [Cross-Reference Anomaly Analysis](data/processed/cross_reference_anomaly_analysis.md)
-- [Five Threads Investigation](data/processed/five_threads_investigation.md)
-- [NCOSE, For Good, and FEC Investigation](data/processed/ncose_forgood_fec_investigation.md)
-
-### Legislative Analysis
-- [Utah and Texas Findings](data/processed/utah_texas_legislative_findings.md)
-- [Louisiana HB-570 Corrected](data/processed/la_hb570_corrected.md)
-- [Colorado GA Witness Findings](data/processed/co_ga_witness_findings.md)
-
-### Reports
-- [Master Summary](output/reports/meta_lobbying_dark_money_summary.md)
-- [Anomaly Report](output/reports/anomaly_report.md)
-- [Consolidated Findings](output/reports/consolidated_findings.md)
+### Data
+- [All Findings (JSON)](data/processed/all_findings.json) -- structured database of 248 findings
+- [Master Entity Tracker](data/processed/tracking.md) -- 75 entities, 11 bills, 17 lobbyists
 
 ## Methodology and Tools
 
-This investigation was conducted by a human researcher who directed all research decisions, selected sources, evaluated findings, and wrote the public-facing posts. Claude Code (Anthropic's CLI tool, running Claude Opus) was used as a research assistant for:
+A human researcher directed all research decisions, selected sources, evaluated findings, and wrote the public-facing posts. Claude Code (Anthropic's CLI tool, running Claude Opus) was used as a research assistant for:
 
 - Bulk data processing: parsing 4,433 IRS Schedule I grant records, 59,736 DAF recipients, 132MB of Colorado TRACER campaign finance data, and IRS Business Master File extracts covering all US tax-exempt organizations
-- Cross-referencing findings across 24 analysis files and identifying patterns that span multiple research threads
-- Drafting intermediate working documents and structured data summaries
-- Web searches against public databases (OpenSecrets, ProPublica, state lobbying portals, WHOIS/DNS, Wayback Machine)
+- Cross-referencing findings across 24+ analysis files and identifying patterns spanning multiple research threads
+- Web searches against public databases (OpenSecrets, ProPublica, state lobbying portals, WHOIS/DNS, Wayback Machine, eintaxid.com)
+- VPN detection and threat analysis pipeline development
 
-Claude Code did not independently choose what to investigate, decide what constitutes a finding, or determine what to publish. Every factual claim in this repository cites a primary source (IRS filing, Senate disclosure, state database, legislative record, or published reporting) that can be independently verified. The tool does not change whether Meta's LD-2 filing lists H.R. 3149, whether DCA has an EIN, or whether Stefanski admitted tech funding under oath. The records exist or they don't.
+Claude Code did not independently choose what to investigate, decide what constitutes a finding, or determine what to publish. Every factual claim cites a primary source (IRS filing, Senate disclosure, state database, legislative record, or published reporting) that can be independently verified. The tool does not change whether Meta's LD-2 filing lists H.R. 3149, whether DCA's EIN reports under $25K, or whether Stefanski admitted tech funding under oath. The records exist or they don't.
 
-If you want to verify any finding, the source URLs and database identifiers are provided throughout. Start with the primary records, not with this repository.
+Verify any finding using the source URLs and database identifiers provided throughout. Start with the primary records, not with this repository.
 
 ## License
 
-This is an OSINT research product. All findings are based on public records. Source data is cited throughout.
+OSINT research product. All findings based on public records. Source data cited throughout.
